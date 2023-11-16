@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhtml Dev</title>
+    <script src="https://guyotjs.github.io/Jhtml/build/jhtml.js"></script>
+    <link rel="stylesheet" href="https://classicmc-studios.github.io/bc.css"/>
+    <style>
+        .bc-left-50{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            position: relative;
+        }
+    </style>
+</head>
+<body class="bc-text-align">
+    <svg height="60" width="200">
+        <text x="30" opacity="0.5" fill="none" stroke="orange" font-style="italic" stroke-width="3px" font-size="75px" font-weight="bold" filter="url(#whiteOutlineEffect)" font-family="sans-serif" y="55">J</text>
+        <text x="50" y="50" font-family="sans-serif" font-weight="1000" font-size="45px" fill="gray">HTML</text>
+    </svg>
+    <svg height="60" width="200">
+        <text x="30" opacity="0.5" fill="none" stroke="#9999ff" font-style="italic" stroke-width="3px" font-size="65px" font-weight="bold" filter="url(#whiteOutlineEffect)" font-family="sans-serif" y="55">BC</text>
+        <text x="50" y="50" font-family="sans-serif" font-weight="950" font-size="45px" fill="gray">.css</text>
+    </svg>
+    <p>Current Dev Environment</p><br/>
+    <div class="bc-border bc-compact bc-left-50 bc-p-10">
+        <h3>Includes</h3>
+        <p incl="content.html"></p>
+    </div><br/>
+    <div class="bc-border bc-compact bc-left-50 bc-p-10">
+        <h3>Buttons</h3>
+        <button id="text" onclick="clicked()">Clicked: 0 times</button>
+    </div>
+    <h3></h3>
+    <script>
+        let amnt = 0
+        function clicked(){
+            amnt++;
+            content("text",`Clicked: ${amnt} times`)
+        }
+        include();
+    </script>
+</body>
+</html>
